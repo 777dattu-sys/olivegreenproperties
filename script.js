@@ -18,12 +18,12 @@ const wordsToType = [
   "Visit Olive Green Properties Rk Group",
 ];
 const bgImages = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
-  "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1600566753086-00f18efc2291?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
 ];
 
 const typingText = document.getElementById("typingText");
@@ -97,7 +97,7 @@ if (propertyGrid) {
     const cardHTML = `
             <div class="property-card scale-up ${prop.delay}">
                 <a href="property-details.html?id=${prop.id}" class="card-img" style="display: block; background-color: #fff;">
-                    <img src="${prop.image}" alt="${prop.title}" ${prop.imageStyle ? `style="${prop.imageStyle}"` : ""}>
+                    <img src="${prop.image}" alt="${prop.title}" loading="lazy" ${prop.imageStyle ? `style="${prop.imageStyle}"` : ""}>
                     ${badgeHTML}
                 </a>
                 <div class="card-content">
@@ -546,10 +546,8 @@ if (themeToggleBtn) {
   } else if (savedTheme === "light") {
     setTheme("light");
   } else {
-    const preferDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(preferDark ? "dark" : "light");
+    // Default to light mode instead of system preference
+    setTheme("light");
   }
 
   themeToggleBtn.addEventListener("click", () => {

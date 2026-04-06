@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .map(
       (img, index) => `
         <div class="gallery-img ${index === 0 ? "active" : ""}">
-            <img src="${img}" alt="${property.title} image ${index + 1}" onclick="changeMainImage('${img}')">
+            <img src="${img}" alt="${property.title} image ${index + 1}" loading="lazy" onclick="changeMainImage('${img}')">
         </div>
     `,
     )
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <!-- Left Column: Details -->
                     <div class="details-main fade-in-up">
                         <div class="main-image-container">
-                            <img id="mainPropertyImage" src="${property.image}" alt="${property.title}" ${property.imageStyle ? `style="${property.imageStyle}"` : ""}>
+                            <img id="mainPropertyImage" src="${property.image}" alt="${property.title}" loading="lazy" ${property.imageStyle ? `style="${property.imageStyle}"` : ""}>
                             ${property.badge ? `<div class="badge">${property.badge}</div>` : ""}
                         </div>
                         <div class="gallery-thumbs">
