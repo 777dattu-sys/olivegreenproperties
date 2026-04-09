@@ -105,7 +105,7 @@ if (propertyGrid) {
                     <p class="property-location" style="color: var(--secondary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;"><i class="fa-solid fa-location-dot"></i> ${prop.location}</p>
                     <p>${prop.description}</p>
                     <div class="card-actions">
-                        <a href="https://wa.me/918639683089?text=I'm%20interested%20in%20${encodeURIComponent(prop.title)}" class="btn btn-outline btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://wa.me/917842007299?text=I'm%20interested%20in%20${encodeURIComponent(prop.title)}" class="btn btn-outline btn-sm" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                         <a href="property-details.html?id=${prop.id}" class="btn btn-primary btn-sm">View Details</a>
                     </div>
                 </div>

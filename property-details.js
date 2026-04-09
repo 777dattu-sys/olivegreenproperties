@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             </form>
 
                             <div class="sidebar-ctas">
-                                <a href="tel:+918639683089" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
-                                <a href="https://wa.me/918639683089?text=I'm%20interested%20in%20${encodeURIComponent(property.title)}" class="btn btn-gold btn-block" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                                <a href="tel:+917842007299" class="btn btn-outline btn-block"><i class="fa-solid fa-phone"></i> Call Now</a>
+                                <a href="https://wa.me/917842007299?text=I'm%20interested%20in%20${encodeURIComponent(property.title)}" class="btn btn-gold btn-block" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                             </div>
                         </div>
                     </div>
