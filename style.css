@@ -489,38 +489,6 @@ ul {
   color: #fff;
 }
 
-#themeToggle {
-  margin-right: 10px;
-  font-size: 0.85rem;
-  min-width: 130px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-}
-
-#themeToggle .theme-icon {
-  font-size: 1rem;
-}
-
-#themeToggle .theme-label {
-  font-size: 0.85rem;
-}
-
-@media (max-width: 768px) {
-  #themeToggle {
-    width: 40px;
-    min-width: 40px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  #themeToggle .theme-label {
-    display: none;
-  }
-}
-
 .contact-title {
   margin-bottom: 20px;
   color: var(--primary-color);

@@ -518,54 +518,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// 9. Theme Toggle (Dark/Light mode) + localStorage persistence
-const themeToggleBtn = document.getElementById("themeToggle");
-const root = document.body;
-
-const setTheme = (mode) => {
-  const iconElem = themeToggleBtn.querySelector(".theme-icon");
-  const labelElem = themeToggleBtn.querySelector(".theme-label");
-
-  if (mode === "dark") {
-    root.classList.add("dark");
-    if (iconElem) iconElem.textContent = "☀️";
-    if (labelElem) labelElem.textContent = "Light Mode";
-  } else {
-    root.classList.remove("dark");
-    if (iconElem) iconElem.textContent = "🌙";
-    if (labelElem) labelElem.textContent = "Dark Mode";
-  }
-
-  localStorage.setItem("oliveGreenTheme", mode);
-};
-
-if (themeToggleBtn) {
-  const savedTheme = localStorage.getItem("oliveGreenTheme");
-  if (savedTheme === "dark") {
-    setTheme("dark");
-  } else if (savedTheme === "light") {
-    setTheme("light");
-  } else {
-    // Default to light mode instead of system preference
-    setTheme("light");
-  }
-
-  themeToggleBtn.addEventListener("click", () => {
-    const currentTheme = root.classList.contains("dark") ? "dark" : "light";
-    setTheme(currentTheme === "dark" ? "light" : "dark");
-  });
-
-  // Update when system preference changes
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      const savedTheme2 = localStorage.getItem("oliveGreenTheme");
-      if (!savedTheme2) {
-        setTheme(e.matches ? "dark" : "light");
-      }
-    });
-}
-
 // 10. Auto-redirect to properties section on load
 document.addEventListener("DOMContentLoaded", () => {
   const propertiesSection = document.getElementById("properties");
